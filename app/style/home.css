@@ -116,6 +116,20 @@ h1 {
 /* ボタン */
 .button {
     display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.saveButton {
+    display: block;
+    width: 100%;
     max-width: 200px;
     margin: 10px auto;
     padding: 10px;

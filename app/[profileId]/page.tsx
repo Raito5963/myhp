@@ -52,7 +52,7 @@ export default function Profile() {
                             <li><strong>趣味:</strong> 将棋・ルービックキューブ</li>
                             <li><strong>自己PR:</strong> （200文字程度）</li>
                         </ul>
-                        <input className="button" type='button' value='名刺を保存' onClick={handleSaveImage} />
+                        <input className="saveButton" type='button' value='名刺を保存' onClick={handleSaveImage} />
                     </div>
                 </div>
                 <canvas ref={canvasRef} style={{ display: "none" }} />
