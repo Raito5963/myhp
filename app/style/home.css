@@ -1,0 +1,142 @@
+/* 全体のレイアウト */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* セクション共通 */
+.profile,
+.qualification,
+.result,
+.work,
+.contact {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* セクション（資格、大会結果、制作物）にスクロールを追加 */
+.qualification,
+.result,
+.work {
+    max-height: 400px;   /* 任意の高さ */
+    overflow-y: auto;    /* 垂直スクロールを有効に */
+}
+
+/* 見出し */
+h1 {
+    color: #2E7D32;
+    border-bottom: 2px solid #2E7D32;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* プロフィール */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.myIcon {
+    flex: 1 1 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.myProfile {
+    flex: 2 1 300px;
+}
+
+.myProfile ul li {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+/* 資格・大会結果・制作物リスト */
+.qualification ul,
+.result ul,
+.work ul {
+    list-style: none;
+    padding: 0;
+}
+
+.qualification ul li,
+.result ul li,
+.work ul li {
+    margin-bottom: 16px;
+}
+
+.qualification ul li h3,
+.result ul li h3,
+.work ul li h3 {
+    color: #2E7D32;
+    margin-bottom: 4px;
+}
+
+/* お問い合わせフォーム */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contactForm label {
+    font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contactForm button {
+    background-color: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+    background-color: #276028;
+}
+
+/* ボタン */
+.button {
+    background-color: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #276028;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .myProfile {
+        text-align: center;
+    }
+}
