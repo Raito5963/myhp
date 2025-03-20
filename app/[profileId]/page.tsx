@@ -1,13 +1,43 @@
+"use client";
 import Header from "../component/header/header";
 import Image from 'next/image';
+import { useRef } from 'react';
 import './../style/home.css';
 import Mail from './../component/mail';
+
 export default function Profile() {
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+    const handleSaveImage = async () => {
+        const img = document.createElement("img");
+        img.src = "/myProfile.png"; // 画像のパス
+
+        img.onload = () => {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            if (!ctx) return;
+
+            // 画像サイズをキャンバスサイズに設定
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // キャンバスに画像を描画
+            ctx.drawImage(img, 0, 0);
+
+            // 画像データを取得
+            const link = document.createElement("a");
+            link.href = canvas.toDataURL("image/png");
+            link.download = "profile.png";
+            link.click();
+        };
+    };
+
     return (
         <>
             <div className='container'>
                 <Header />
-                <div className='profile'id='profile' style={{ marginTop:"20px"}}>
+                <div className='profile' id='profile' style={{ marginTop: "20px" }}>
                     <div className='myIcon'>
                         <Image src='/myIcon.jpg' alt='icon' width={500} height={500} />
                     </div>
@@ -22,10 +52,10 @@ export default function Profile() {
                             <li><strong>趣味:</strong> 将棋・ルービックキューブ</li>
                             <li><strong>自己PR:</strong> （200文字程度）</li>
                         </ul>
-                        <input className="button" type='button' value='名刺を保存' />
+                        <input className="button" type='button' value='名刺を保存' onClick={handleSaveImage} />
                     </div>
                 </div>
-
+                <canvas ref={canvasRef} style={{ display: "none" }} />
                 <div className='qualification' id='qualification'>
                     <h1>保有資格検定</h1>
                     <ul>

@@ -9,11 +9,7 @@
 }
 
 /* セクション共通 */
-.profile,
-.qualification,
-.result,
-.work,
-.contact {
+.profile, .qualification, .result, .work, .contact {
     margin-bottom: 40px;
     padding: 20px;
     background: #fff;
@@ -21,12 +17,10 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* セクション（資格、大会結果、制作物）にスクロールを追加 */
-.qualification,
-.result,
-.work {
-    max-height: 400px;   /* 任意の高さ */
-    overflow-y: auto;    /* 垂直スクロールを有効に */
+/* スクロール可能エリア */
+.qualification, .result, .work {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 /* 見出し */
@@ -42,6 +36,7 @@ h1 {
 .profile {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -49,38 +44,94 @@ h1 {
 .myIcon {
     flex: 1 1 300px;
     text-align: center;
-    margin-bottom: 20px;
+}
+
+.myIcon img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .myProfile {
     flex: 2 1 300px;
+    text-align: center;
+}
+
+.myProfile ul {
+    padding: 0;
+    list-style: none;
 }
 
 .myProfile ul li {
     margin-bottom: 8px;
-    list-style: none;
 }
 
 /* 資格・大会結果・制作物リスト */
-.qualification ul,
-.result ul,
-.work ul {
+.qualification ul, .result ul, .work ul {
     list-style: none;
     padding: 0;
 }
 
-.qualification ul li,
-.result ul li,
-.work ul li {
+.qualification ul li, .result ul li, .work ul li {
     margin-bottom: 16px;
 }
 
-.qualification ul li h3,
-.result ul li h3,
-.work ul li h3 {
+.qualification ul li h3, .result ul li h3, .work ul li h3 {
     color: #2E7D32;
     margin-bottom: 4px;
 }
+
+/* お問い合わせフォーム */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contactForm label {
+    font-weight: bold;
+}
+
+.contactForm input, .contactForm textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contactForm button {
+    background-color: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+    background-color: #276028;
+}
+
+/* ボタン */
+.button {
+    display: block;
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #1B5E20;
+}
+
 
 /* お問い合わせフォーム */
 .contactForm {
@@ -140,3 +191,5 @@ h1 {
         text-align: center;
     }
 }
+
+
