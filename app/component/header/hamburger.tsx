@@ -18,12 +18,11 @@ export default function Hamburger() {
                 </IconButton>
                 <Drawer className='draw' anchor='left' open={ isOpen } onClose={ () => toggleDrawer( false ) }>
                     <ul className='drawUl'>
-                        <li className='drawLi'><a className='drawa' href='/home'>Home</a></li>
-                        <li className='drawLi'><a className='drawa' href='/about'>プロフィール</a></li>
-                        <li className='drawLi'><a className='drawa' href='/qualification'>資格・検定</a></li>
-                        <li className='drawLi'><a className='drawa' href='/result'>大会結果</a></li>
-                        <li className='drawLi'><a className='drawa' href='/work'>制作物</a></li>
-                        <li className='drawLi'><a className='drawa' href='/contact'>お問い合わせ</a></li>
+                        <li className='drawLi'><a className='drawa' href='#profile'>プロフィール</a></li>
+                        <li className='drawLi'><a className='drawa' href='#qualification'>資格・検定</a></li>
+                        <li className='drawLi'><a className='drawa' href='#result'>大会結果</a></li>
+                        <li className='drawLi'><a className='drawa' href='#work'>制作物</a></li>
+                        <li className='drawLi'><a className='drawa' href='#contact'>お問い合わせ</a></li>
                     </ul>
                 </Drawer>
             </div>
