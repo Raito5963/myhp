@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import './../style/home.css';
 import Mail from './../component/mail';
+import Head from "next/head";
 
 export default function Profile() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -35,6 +36,9 @@ export default function Profile() {
 
     return (
         <>
+            <Head>
+                <meta name="robots" content="noindex, nofollow" />
+            </Head>
             <div className='container'>
                 <Header />
                 <div className='profile' id='profile' style={{ marginTop: "20px" }}>
