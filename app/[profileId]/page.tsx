@@ -7,7 +7,7 @@ export default function Profile() {
         <>
             <div className='container'>
                 <Header />
-                <div className='profile' style={{ marginTop:"20px"}}>
+                <div className='profile'id='profile' style={{ marginTop:"20px"}}>
                     <div className='myIcon'>
                         <Image src='/myIcon.jpg' alt='icon' width={500} height={500} />
                     </div>
