@@ -10,7 +10,7 @@ export default function Profile() {
 
     const handleSaveImage = async () => {
         const img = document.createElement("img");
-        img.src = "/myProfile.png"; // 画像のパス
+        img.src = "/RaitoMochiduki.png"; // 画像のパス
 
         img.onload = () => {
             const canvas = document.createElement("canvas");
@@ -28,7 +28,7 @@ export default function Profile() {
             // 画像データを取得
             const link = document.createElement("a");
             link.href = canvas.toDataURL("image/png");
-            link.download = "profile.png";
+            link.download = "RaitoMochiduki.png";
             link.click();
         };
     };
