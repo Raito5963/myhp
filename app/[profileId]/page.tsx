@@ -26,7 +26,7 @@ export default function Profile() {
                     </div>
                 </div>
 
-                <div className='qualification' id='qualificaiton'>
+                <div className='qualification' id='qualification'>
                     <h1>保有資格検定</h1>
                     <ul>
                         <li>
